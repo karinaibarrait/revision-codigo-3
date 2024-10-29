@@ -1,10 +1,10 @@
 const productos = [
   // Se referenciaron las imágenes de acuerdo al nuevo acomodo de carpetas
-  { nombre: "Zapato negro", tipo: "zapato", color: "negro", img: "./public/taco-negro.jpg" },
-  { nombre: "Zapato azul", tipo: "zapato", color: "azul", img: "./public/taco-azul.jpg" },
-  { nombre: "Bota negra", tipo: "bota", color: "negro", img: "./public/bota-negra.jpg" },
-  { nombre: "Bota azul", tipo: "bota", color: "azul", img: "./public/bota-azul.jpg" },
-  { nombre: "Zapato rojo", tipo: "zapato", color: "rojo", img: "./public/zapato-rojo.jpg" }
+  { nombre: "Zapato negro", tipo: "zapato", color: "negro", img: "/public/taco-negro.jpg" },
+  { nombre: "Zapato azul", tipo: "zapato", color: "azul", img: "/public/taco-azul.jpg" },
+  { nombre: "Bota negra", tipo: "bota", color: "negro", img: "/public/bota-negra.jpg" },
+  { nombre: "Bota azul", tipo: "bota", color: "azul", img: "/public/bota-azul.jpg" },
+  { nombre: "Zapato rojo", tipo: "zapato", color: "rojo", img: "/public/zapato-rojo.jpg" }
 ]
 
 // Se cambio getElementByName por querySelector para seleccionar el elemento correcto
