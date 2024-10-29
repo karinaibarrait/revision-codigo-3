@@ -35,9 +35,9 @@ Este proyecto es una aplicación web sencilla que permite a los usuarios filtrar
 ## Estructura del Proyecto 🍂
 
 - **index.html**: archivo principal que contiene la estructura HTML.
-- **src/filtro.js**: contiene el código JavaScript encargado de la lógica de filtrado y manipulación del DOM.
-- **src/filtro.css**: estilos para darle una apariencia visual atractiva a la aplicación.
-- **/public/imgs**: contiene las imágenes de los productos.
+- **/src/filtro.js**: contiene el código JavaScript encargado de la lógica de filtrado y manipulación del DOM.
+- **/src/filtro.css**: estilos para darle una apariencia visual atractiva a la aplicación.
+- **/public**: contiene las imágenes de los productos.
 
 ## Cómo Utilizarlo 🔎
 
