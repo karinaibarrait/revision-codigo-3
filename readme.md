@@ -1,4 +1,4 @@
-# Filtro de Productos ☕️✨
+# Filtroado de Productos ☕️✨
 
 Este proyecto es una aplicación web sencilla que permite a los usuarios filtrar una lista de productos según su tipo o color. Es una excelente forma de practicar la manipulación del DOM con JavaScript, así como el uso de HTML y CSS para la estructura y el diseño de la interfaz.
 
@@ -32,7 +32,7 @@ Este proyecto es una adaptación y mejora de un proyecto originalmente creado po
 
 ## Enlace al Proyecto 🌐
 
-Puedes ver el proyecto en vivo aquí: [Filtro de Productos](https://karinaibarrait.github.io/revision-codigo-3/)
+Puedes ver el proyecto en vivo aquí: [Filtrado de Productos](https://karinaibarrait.github.io/revision-codigo-3/)
 
 
 
