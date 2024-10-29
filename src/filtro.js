@@ -1,63 +1,59 @@
-// Tenemos un li de productos
-
 const productos = [
-  {nombre: "Zapato negro", tipo: "zapato", color: "negro", img: "./taco-negro.jpg"},
-  {nombre: "Zapato azul", tipo: "zapato", color: "azul", img: "./taco-azul.jpg"},
-  {nombre: "Bota negra", tipo: "bota", color: "negro", img: "./bota-negra.jpg"},
-  {nombre: "Bota azul", tipo: "bota", color: "azul", img: "./bota-azul.jpg"},
-  {nombre: "Zapato rojo", tipo: "zapato", color: "rojo", img: "./zapato-rojo.jpg"}
+  // Se referenciaron las imágenes de acuerdo al nuevo acomodo de carpetas
+  { nombre: "Zapato negro", tipo: "zapato", color: "negro", img: "../public/imgs/taco-negro.jpg" },
+  { nombre: "Zapato azul", tipo: "zapato", color: "azul", img: "../public/imgs/taco-azul.jpg" },
+  { nombre: "Bota negra", tipo: "bota", color: "negro", img: "../public/imgs/bota-negra.jpg" },
+  { nombre: "Bota azul", tipo: "bota", color: "azul", img: "../public/imgs/bota-azul.jpg" },
+  { nombre: "Zapato rojo", tipo: "zapato", color: "rojo", img: "../public/imgs/zapato-rojo.jpg" }
 ]
 
-const li = document.getElementsByName("lista-de-productos")
+// Se cambio getElementByName por querySelector para seleccionar el elemento correcto
+const li = document.querySelector("#lista-de-productos"); // Se agregó # para indiciar que es un id
 const $i = document.querySelector('.input');
 
-for (let i = 0; i < productos.length; i++) {
-  var d = document.createElement("div")
-  d.classList.add("producto")
-
-  var ti = document.createElement("p")
-  ti.classList.add("titulo")
-  ti.textContent = productos[i].nombre
-  
-  var imagen = document.createElement("img");
-  imagen.setAttribute('src', productos[i].img);
-
-  d.appendChild(ti)
-  d.appendChild(imagen)
-
-  li.appendChild(d)
-}
-
-displayProductos(productos)
-const botonDeFiltro = document.querySelector("button");
-
-botonDeFiltro.onclick = function() {
+// Función para mostrar los productos en la página que permite limpiar el contendeor de productos y renderizar la lista filtrada
+const displayProductos = (productos) => {
+  // Limpiar la lista antes de renderizar
   while (li.firstChild) {
     li.removeChild(li.firstChild);
   }
 
-  const texto = $i.value;
-  console.log(texto);
-  const productosFiltrados = filtrado(productos, texto );
+  for (let i = 0; i < productos.length; i++) {
+    const d = document.createElement("div");
+    d.classList.add("producto");
 
-  for (let i = 0; i < productosFiltrados.length; i++) {
-    var d = document.createElement("div")
-    d.classList.add("producto")
-  
-    var ti = document.createElement("p")
-    ti.classList.add("titulo")
-    ti.textContent = productosFiltrados[i].nombre
-    
-    var imagen = document.createElement("img");
-    imagen.setAttribute('src', productosFiltrados[i].img);
-  
-    d.appendChild(ti)
-    d.appendChild(imagen)
-  
-    li.appendChild(d)
+    const ti = document.createElement("p");
+    ti.classList.add("titulo");
+    ti.textContent = productos[i].nombre;
+
+    const imagen = document.createElement("img");
+    imagen.setAttribute('src', productos[i].img);
+
+    d.appendChild(ti);
+    d.appendChild(imagen);
+
+    li.appendChild(d);
   }
 }
 
+// Inicializar mostrando todos los productos
+displayProductos(productos);
+
+const botonDeFiltro = document.querySelector("button");
+
+botonDeFiltro.onclick = function () {
+
+  const texto = $i.value.toLowerCase(); // Convertir el texto a minúsculas para facilitar el filtrado
+  console.log(texto);
+  const productosFiltrados = filtrado(productos, texto);
+
+  // Se eliminó la sección de codigo repetida ya que al tener la función displayProductos se puede reutilizar el código
+
+  // Mostrar los productos filtrados
+  displayProductos(productosFiltrados);
+}
+
+// Función para filtrar productos por tipo o color
 const filtrado = (productos = [], texto) => {
   return productos.filter(item => item.tipo.includes(texto) || item.color.includes(texto));
-}  
+}
