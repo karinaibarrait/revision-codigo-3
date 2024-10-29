@@ -48,8 +48,4 @@ Este proyecto es una aplicación web sencilla que permite a los usuarios filtrar
 
 Este proyecto es una adaptación y mejora de un proyecto originalmente creado por otra persona. Mi contribución se ha centrado en la corrección de errores y la optimización del código para mejorar la funcionalidad y la experiencia del usuario. No soy la autora principal del proyecto original, pero he realizado cambios significativos para incrementar su calidad.
 
-## Enlace al Proyecto 🌐
-
-Puedes ver el proyecto en vivo aquí: [Filtrado de Productos](https://karinaibarrait.github.io/revision-codigo-3/)
-
 
