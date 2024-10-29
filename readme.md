@@ -1,4 +1,4 @@
-# Filtroado de Productos ☕️✨
+# Filtrado de Productos ☕️✨
 
 Este proyecto es una aplicación web sencilla que permite a los usuarios filtrar una lista de productos según su tipo o color. Es una excelente forma de practicar la manipulación del DOM con JavaScript, así como el uso de HTML y CSS para la estructura y el diseño de la interfaz.
 
