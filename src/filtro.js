@@ -7,6 +7,7 @@ const productos = [
   { nombre: "Zapato rojo", tipo: "zapato", color: "rojo", img: "../public/zapato-rojo.jpg" }
 ]
 
+// A lo largo de todo el scipt se cambio var por const
 // Se cambio getElementByName por querySelector para seleccionar el elemento correcto
 const li = document.querySelector("#lista-de-productos"); // Se agregó # para indiciar que es un id
 const $i = document.querySelector('.input');
